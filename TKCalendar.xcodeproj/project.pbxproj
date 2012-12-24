@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30A1C451687446A008F5FE8 /* TKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A1C441687446A008F5FE8 /* TKEvent.m */; };
+		D30A1C4B168745A3008F5FE8 /* TKEvent+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A1C4A168745A3008F5FE8 /* TKEvent+Helper.m */; };
+		D30A1C4E16874AA7008F5FE8 /* TKEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A1C4D16874AA7008F5FE8 /* TKEventView.m */; };
+		D30A1C5516875E2E008F5FE8 /* TKCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A1C5416875E2E008F5FE8 /* TKCalendar.m */; };
+		D30A1C5816875F56008F5FE8 /* TKCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A1C5716875F56008F5FE8 /* TKCalendarHeaderView.m */; };
 		D3385C2C1684906B0092F6BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3385C2B1684906B0092F6BE /* UIKit.framework */; };
 		D3385C2E1684906B0092F6BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3385C2D1684906B0092F6BE /* Foundation.framework */; };
 		D3385C301684906B0092F6BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3385C2F1684906B0092F6BE /* CoreGraphics.framework */; };
@@ -18,9 +23,21 @@
 		D3385C421684906D0092F6BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3385C411684906D0092F6BE /* Default-568h@2x.png */; };
 		D3385C451684906D0092F6BE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3385C431684906D0092F6BE /* MainStoryboard.storyboard */; };
 		D3385C481684906E0092F6BE /* TKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3385C471684906E0092F6BE /* TKViewController.m */; };
+		D3385C50168491260092F6BE /* TKCalendarGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3385C4F168491260092F6BE /* TKCalendarGridView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D30A1C431687446A008F5FE8 /* TKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKEvent.h; path = CalendarView/TKEvent.h; sourceTree = "<group>"; };
+		D30A1C441687446A008F5FE8 /* TKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKEvent.m; path = CalendarView/TKEvent.m; sourceTree = "<group>"; };
+		D30A1C49168745A3008F5FE8 /* TKEvent+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TKEvent+Helper.h"; path = "CalendarView/TKEvent+Helper.h"; sourceTree = "<group>"; };
+		D30A1C4A168745A3008F5FE8 /* TKEvent+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TKEvent+Helper.m"; path = "CalendarView/TKEvent+Helper.m"; sourceTree = "<group>"; };
+		D30A1C4C16874AA7008F5FE8 /* TKEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKEventView.h; path = CalendarView/TKEventView.h; sourceTree = "<group>"; };
+		D30A1C4D16874AA7008F5FE8 /* TKEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKEventView.m; path = CalendarView/TKEventView.m; sourceTree = "<group>"; };
+		D30A1C5316875E2E008F5FE8 /* TKCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKCalendar.h; path = CalendarView/TKCalendar.h; sourceTree = "<group>"; };
+		D30A1C5416875E2E008F5FE8 /* TKCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKCalendar.m; path = CalendarView/TKCalendar.m; sourceTree = "<group>"; };
+		D30A1C5616875F56008F5FE8 /* TKCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKCalendarHeaderView.h; path = CalendarView/TKCalendarHeaderView.h; sourceTree = "<group>"; };
+		D30A1C5716875F56008F5FE8 /* TKCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKCalendarHeaderView.m; path = CalendarView/TKCalendarHeaderView.m; sourceTree = "<group>"; };
+		D30A1C5916876160008F5FE8 /* TKCalendarConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TKCalendarConstants.h; path = CalendarView/TKCalendarConstants.h; sourceTree = "<group>"; };
 		D3385C271684906B0092F6BE /* TKCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3385C2B1684906B0092F6BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D3385C2D1684906B0092F6BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +54,8 @@
 		D3385C441684906D0092F6BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		D3385C461684906E0092F6BE /* TKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKViewController.h; sourceTree = "<group>"; };
 		D3385C471684906E0092F6BE /* TKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKViewController.m; sourceTree = "<group>"; };
+		D3385C4E168491260092F6BE /* TKCalendarGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKCalendarGridView.h; path = CalendarView/TKCalendarGridView.h; sourceTree = "<group>"; };
+		D3385C4F168491260092F6BE /* TKCalendarGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKCalendarGridView.m; path = CalendarView/TKCalendarGridView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +108,19 @@
 				D3385C461684906E0092F6BE /* TKViewController.h */,
 				D3385C471684906E0092F6BE /* TKViewController.m */,
 				D3385C321684906C0092F6BE /* Supporting Files */,
+				D30A1C5916876160008F5FE8 /* TKCalendarConstants.h */,
+				D30A1C5316875E2E008F5FE8 /* TKCalendar.h */,
+				D30A1C5416875E2E008F5FE8 /* TKCalendar.m */,
+				D3385C4E168491260092F6BE /* TKCalendarGridView.h */,
+				D3385C4F168491260092F6BE /* TKCalendarGridView.m */,
+				D30A1C5616875F56008F5FE8 /* TKCalendarHeaderView.h */,
+				D30A1C5716875F56008F5FE8 /* TKCalendarHeaderView.m */,
+				D30A1C431687446A008F5FE8 /* TKEvent.h */,
+				D30A1C441687446A008F5FE8 /* TKEvent.m */,
+				D30A1C49168745A3008F5FE8 /* TKEvent+Helper.h */,
+				D30A1C4A168745A3008F5FE8 /* TKEvent+Helper.m */,
+				D30A1C4C16874AA7008F5FE8 /* TKEventView.h */,
+				D30A1C4D16874AA7008F5FE8 /* TKEventView.m */,
 			);
 			path = TKCalendar;
 			sourceTree = "<group>";
@@ -177,6 +209,12 @@
 				D3385C381684906C0092F6BE /* main.m in Sources */,
 				D3385C3C1684906D0092F6BE /* TKAppDelegate.m in Sources */,
 				D3385C481684906E0092F6BE /* TKViewController.m in Sources */,
+				D3385C50168491260092F6BE /* TKCalendarGridView.m in Sources */,
+				D30A1C451687446A008F5FE8 /* TKEvent.m in Sources */,
+				D30A1C4B168745A3008F5FE8 /* TKEvent+Helper.m in Sources */,
+				D30A1C4E16874AA7008F5FE8 /* TKEventView.m in Sources */,
+				D30A1C5516875E2E008F5FE8 /* TKCalendar.m in Sources */,
+				D30A1C5816875F56008F5FE8 /* TKCalendarHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +296,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TKCalendar/TKCalendar-Prefix.pch";
 				INFOPLIST_FILE = "TKCalendar/TKCalendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -269,7 +309,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TKCalendar/TKCalendar-Prefix.pch";
 				INFOPLIST_FILE = "TKCalendar/TKCalendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -293,6 +335,7 @@
 				D3385C4D1684906E0092F6BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
