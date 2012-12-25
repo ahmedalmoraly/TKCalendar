@@ -1,0 +1,10 @@
+
+*.xcworkspacedata
+
+*.xcuserstate
+
+*.xcbkptlist
+
+*.xcscheme
+
+TKCalendar.xcodeproj/xcuserdata/ahmadal-moraly.xcuserdatad/xcschemes/xcschememanagement.plist
