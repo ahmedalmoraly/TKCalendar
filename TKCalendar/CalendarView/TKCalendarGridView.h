@@ -17,6 +17,7 @@
 @property (nonatomic, assign) CGFloat cellWidth;
 @property (nonatomic, assign) CGFloat cellHeight;
 
+@property (nonatomic, strong) NSMutableArray *events;
 @property (nonatomic, strong) TKCalendarHeaderView *header;
 
 

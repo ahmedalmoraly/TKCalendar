@@ -13,7 +13,6 @@
 
 @interface TKCalendarGridView ()
 
-@property (nonatomic, strong) NSMutableArray *events;
 
 -(void)reloadDate;
 @end
@@ -44,7 +43,7 @@
     
     CGContextRef c = UIGraphicsGetCurrentContext();
     
-	CGContextSetStrokeColorWithColor(c, [UIColor greenColor].CGColor);
+	CGContextSetStrokeColorWithColor(c, [UIColor lightGrayColor].CGColor);
 	
     CGFloat width = rect.size.width / (self.numberOfColumns + 1);
     CGFloat height = rect.size.height / (self.numberOfRows + 1);

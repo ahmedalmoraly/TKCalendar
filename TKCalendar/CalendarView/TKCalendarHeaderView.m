@@ -9,6 +9,7 @@
 #import "TKCalendarHeaderView.h"
 #import "TKCalendarConstants.h"
 #import "TKCalendarGridView.h"
+#import "TKCalendar.h"
 
 @interface TKCalendarHeaderView ()
 
@@ -42,6 +43,14 @@
     }
 }
 
+-(NSMutableArray *)weekdays
+{
+    return [(TKCalendar *)self.superview weekdays];
+}
+-(NSDate *)displayDate
+{
+    return [(TKCalendar *)self.superview currentDate];
+}
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
@@ -51,7 +60,7 @@
     register unsigned int i = 1;
     NSDateComponents *todayComponents = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:[NSDate date]];
     
-    NSArray *weekdaySymbols = [self.dateFormatter shortWeekdaySymbols];
+    NSArray *weekdaySymbols =(self.grid.cellWidth <= MIN_CELL_WIDTH) ? [self.dateFormatter veryShortWeekdaySymbols] : [self.dateFormatter shortWeekdaySymbols];
     CFCalendarRef currentCalendar = CFCalendarCopyCurrent();
     int d = CFCalendarGetFirstWeekday(currentCalendar) - 1;
     CFRelease(currentCalendar);
@@ -60,17 +69,19 @@
     
     NSString *header = [NSString stringWithFormat:@"%@ %i", [self.dateFormatter monthSymbols][currentYear.month -1], currentYear.year];
 #ifdef __IPHONE_6_0
-    [header drawInRect:rect withFont:[UIFont boldSystemFontOfSize:17] lineBreakMode:0 alignment:NSTextAlignmentCenter];
+    [header drawInRect:rect withFont:[UIFont boldSystemFontOfSize:14] lineBreakMode:0 alignment:NSTextAlignmentCenter];
 #else
-    [header drawInRect:rect withFont:[UIFont boldSystemFontOfSize:17] lineBreakMode:0 alignment:UITextAlignmentCenter];
+    [header drawInRect:rect withFont:[UIFont boldSystemFontOfSize:14] lineBreakMode:0 alignment:UITextAlignmentCenter];
 #endif
-    for (NSDate *date in self.weekdays) {
+    
+    for (NSDate *date in self.weekdays)
+    {
         NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:date];
         NSString *displayText = [NSString stringWithFormat:@"%@ %i", [weekdaySymbols objectAtIndex:d], [components day]];
         
         CGSize sizeNecessary = [displayText sizeWithFont:[UIFont systemFontOfSize:12]];
         CGRect rect = CGRectMake(self.grid.cellWidth * i + ((self.grid.cellWidth - sizeNecessary.width) / 2.f),
-                                 self.center.y,
+                                 CGRectGetMaxY(self.bounds) - sizeNecessary.height,
                                  sizeNecessary.width,
                                  sizeNecessary.height);
         

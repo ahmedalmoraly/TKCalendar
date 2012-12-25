@@ -13,6 +13,8 @@
 
 @interface TKCalendar : UIView
 
+@property (nonatomic, strong) NSMutableArray *weekdays;
+@property (nonatomic, strong) NSDate *currentDate;
 @property (nonatomic, strong) TKCalendarGridView *gridView;
 @property (nonatomic, strong) TKCalendarHeaderView *header;
 @property (nonatomic, assign) NSInteger numberOfColumns;
