@@ -69,9 +69,9 @@
     
     NSString *header = [NSString stringWithFormat:@"%@ %i", [self.dateFormatter monthSymbols][currentYear.month -1], currentYear.year];
 #ifdef __IPHONE_6_0
-    [header drawInRect:rect withFont:[UIFont boldSystemFontOfSize:14] lineBreakMode:0 alignment:NSTextAlignmentCenter];
+    [header drawInRect:rect withFont:[UIFont boldSystemFontOfSize:12] lineBreakMode:0 alignment:NSTextAlignmentCenter];
 #else
-    [header drawInRect:rect withFont:[UIFont boldSystemFontOfSize:14] lineBreakMode:0 alignment:UITextAlignmentCenter];
+    [header drawInRect:rect withFont:[UIFont boldSystemFontOfSize:12] lineBreakMode:0 alignment:UITextAlignmentCenter];
 #endif
     
     for (NSDate *date in self.weekdays)

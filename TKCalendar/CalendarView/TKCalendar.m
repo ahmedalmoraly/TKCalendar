@@ -30,6 +30,9 @@
     
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     [self addGestureRecognizer:swipe];
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self addGestureRecognizer:swipeRight];
     return self;
 }
 
@@ -211,6 +214,8 @@
     }
     
     [self.header setNeedsDisplay];
+    [self.gridView setNeedsDisplay];
+    
 }
 
 @end

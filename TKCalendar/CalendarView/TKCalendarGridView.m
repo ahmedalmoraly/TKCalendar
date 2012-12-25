@@ -10,6 +10,7 @@
 #import "TKCalendarConstants.h"
 #import "TKCalendarHeaderView.h"
 #import "TKEventView.h"
+#import "TKCalendar.h"
 
 @interface TKCalendarGridView ()
 
@@ -57,14 +58,13 @@
         float x2 = CGRectGetMaxX(rect);
         float y2 = CGRectGetMaxY(rect);
         int i = 0;
-//        x1 += 30;
         for (float dy = 0; dy <= y2 ; dy += self.cellHeight)
         {
             CGContextMoveToPoint(c, x1, y1+dy);
             CGContextAddLineToPoint(c, x2, y1+dy);
             
             NSString *hr = [NSString stringWithFormat:@"%i:00", i];
-            [hr drawAtPoint:CGPointMake(x1+10, y1+dy) withFont:[UIFont systemFontOfSize:14]];
+            [hr drawAtPoint:CGPointMake(x1+3, y1+dy) withFont:[UIFont italicSystemFontOfSize:12]];
                 i++;
         }
         CGContextMoveToPoint(c, x1, y2);
@@ -99,10 +99,21 @@
     }];
 }
 
+-(NSInteger)currentWeek
+{
+    
+    NSDateComponents *comp = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:[(TKCalendar *)self.superview.superview currentDate]];
+    return comp.weekdayOrdinal;
+}
+
 -(void)addEvent:(TKEvent *)event
 {
     // get offset
     NSDateComponents *comp = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:event.startDate];
+    
+    if ([self currentWeek] != comp.weekdayOrdinal) {
+        return;
+    }
     
     int day = comp.weekday;// day is the column number
     int hr = comp.hour; // hour is the row number
